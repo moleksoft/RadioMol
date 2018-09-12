@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.petr.radiomol"
+    android:installLocation="preferExternal"
+    android:revisionCode="1"
+    android:versionName="@string/version">
+
+    <uses-sdk
+        android:maxSdkVersion="26"
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+
+    <!-- pristupy -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.RadioListActivity" />
+
+        <!-- poslouchac zmeny pripojeni -->
+        <receiver
+            android:name=".brodcast_receiver.ReceiverStateConnection"
+            android:exported="false"> <!-- prima pouze zpravy vramci teto aplikace -->
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ui.InfoActivity" />
+        <activity
+            android:name=".ui.SetTimeActivity"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        />
+        <receiver
+            android:name=".brodcast_receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver android:name=".ui.NewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".brodcast_receiver.CallReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.sction.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

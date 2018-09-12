@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.petr.radiomol.ui.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <!--android:background="@color/colorBackground"-->
+
+    <Button
+        android:id="@+id/button_timer"
+        android:layout_width="@dimen/size_button_timre_alarm"
+        android:layout_height="@dimen/size_button_timre_alarm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/timer_selector"
+        android:onClick="setTimer" />
+
+    <TextView
+        android:id="@+id/text_timer"
+        android:layout_width="@dimen/size_button_timre_alarm"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_timer"
+        android:layout_alignStart="@+id/button_timer"
+        android:layout_below="@+id/button_timer"
+        android:text="--:--"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_alarm"
+        android:layout_width="@dimen/size_button_timre_alarm"
+        android:layout_height="@dimen/size_button_timre_alarm"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/alarm_selector_off"
+        android:onClick="setAlarm" />
+
+    <TextView
+        android:id="@+id/text_alarm"
+        android:layout_width="@dimen/size_button_timre_alarm"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_alarm"
+        android:layout_alignStart="@+id/button_alarm"
+        android:layout_below="@+id/button_alarm"
+        android:text="--:--"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_player"
+        android:layout_width="@dimen/size_button_player"
+        android:layout_height="@dimen/size_button_player"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/play_selector"
+        android:onClick="playerAction" />
+
+    <TextView
+        android:id="@+id/text_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_player"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/seek_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/track"
+        android:thumb="@drawable/thumb" />
+
+    <TextView
+        android:id="@+id/text_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_timer"
+        android:layout_centerHorizontal="true"
+        android:text="Data"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

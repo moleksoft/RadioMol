@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransparent"
+    tools:context="com.example.petr.radiomol.ui.SetTimeActivity">
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="270dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/set_time_background">
+
+        <Button
+            android:id="@+id/button_up_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button_up_minute"
+            android:layout_alignBottom="@+id/button_up_minute"
+            android:layout_alignLeft="@+id/text_hour"
+            android:layout_toLeftOf="@+id/textView4"
+            android:background="@drawable/button_selector"
+            android:onClick="upHour"
+            android:text="+"
+            android:textSize="@dimen/size_up_down" />
+
+        <TextView
+            android:id="@+id/text_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_toRightOf="@+id/textView4"
+            android:text="00"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/size_time"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_up_hour"
+            android:layout_toLeftOf="@+id/textView4"
+            android:text="00"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/size_time"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_hour"
+            android:layout_centerHorizontal="true"
+            android:text=":"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/size_time"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_up_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/text_minute"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/textView4"
+            android:background="@drawable/button_selector"
+            android:onClick="upMinute"
+            android:text="+"
+            android:textSize="@dimen/size_up_down" />
+
+        <Button
+            android:id="@+id/button_down_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_hour"
+            android:layout_below="@+id/text_hour"
+            android:layout_toLeftOf="@+id/textView4"
+            android:background="@drawable/button_selector"
+            android:onClick="downHour"
+            android:text="-"
+            android:textSize="@dimen/size_up_down"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_down_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/button_down_hour"
+            android:layout_alignRight="@+id/text_minute"
+            android:layout_toRightOf="@+id/textView4"
+            android:background="@drawable/button_selector"
+            android:onClick="downMinute"
+            android:text="-"
+            android:textSize="@dimen/size_up_down"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_set_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button_down_hour"
+            android:layout_alignRight="@+id/button_down_minute"
+            android:layout_below="@+id/button_down_hour"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_selector"
+            android:onClick="setTimer"
+            android:text="OK"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

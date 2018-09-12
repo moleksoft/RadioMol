@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">RadioMol</string>
+    <string name="version">1.0</string>
+
+    <string name="www">www.moleksoft.cz</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!-- oznameni -->
+    <string name="title_progres">Připojuji</string>
+    <string name="no_select">Není vybrána žádná stanice!</string>
+
+    <!-- popisky -->
+    <string name="title_info_app">Informace</string>
+
+    <!-- titulky -->
+    <string name="title_list_cz">Česká rádia</string>
+    <string name="title_settings">Nastavení</string>
+    <string name="title_o_app">O aplikaci</string>
+    <string name="title_radio_info">Informace</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+    <!-- texty -->
+    <!--string name="info_app">RadioMol</string-->
+
+    <string-array name="quality">
+        <item>32kbs</item>
+        <item>64kbs</item>
+        <item>128kbs</item>
+    </string-array>
+
+
+</resources>

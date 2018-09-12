@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_list_cz"
+            android:icon="@drawable/list"
+            android:title="@string/title_list_cz" />
+        <!--item android:id="@+id/nav_list_sk"
+              android:icon="@drawable/list"
+              android:title="Slovenská rádia"/-->
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/settings"
+            android:title="@string/title_settings" />
+        <item
+            android:id="@+id/nav_o_app"
+            android:icon="@drawable/info"
+            android:title="@string/title_o_app"/>
+
+    </group>
+
+    <item android:title="@string/title_radio_info"
+        android:id="@+id/nav_radio_name">
+        <menu>
+            <item
+                android:id="@+id/nav_radio_web"
+                android:icon="@drawable/internet"
+                android:title="" />
+            <item
+                android:id="@+id/nav_radio_facebook"
+                android:icon="@drawable/facebook"
+                android:title="Facebook" />
+            <item
+                android:id="@+id/nav_radio_sms"
+                android:icon="@drawable/sms_2"
+                android:title="SMS"/>
+            <item
+                android:id="@+id/nav_radio_call"
+                android:icon="@drawable/telephone"
+                android:title="Volat"/>
+            <item
+                android:id="@+id/nav_radio_car"
+                android:icon="@drawable/car"
+                android:title="Informovat o dopravě"/>
+        </menu>
+    </item>
+
+</menu>
